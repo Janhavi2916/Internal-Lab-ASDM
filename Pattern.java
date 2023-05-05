@@ -10,7 +10,7 @@ public class SolidRectanglepattern
 			//inner loop column
 			for (int j=1; j<=m; j++) 
 			{
-				System.out.print("1");
+				System.out.print("*");
 			}System.out.println();
 		}
 	}
