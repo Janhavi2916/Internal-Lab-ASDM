@@ -1,0 +1,85 @@
+public class Flower {
+  private String name;
+  private int no_of_petals;
+  private double price;
+  private int no_of_pieces;
+  private double total_price;
+
+  // No argument constructor
+  public Flower() {
+    this.name = "Default";
+    this.no_of_petals = 0;
+    this.price = 0.0;
+    this.no_of_pieces = 0;
+    this.total_price = 0.0;
+  }
+
+  // Parameterized constructor
+  public Flower(String name, int no_of_petals, double price, int no_of_pieces) {
+    this.name = name;
+    this.no_of_petals = no_of_petals;
+    this.price = price;
+    this.no_of_pieces = no_of_pieces;
+    this.total_price = price * no_of_pieces;
+  }
+
+  // Method to calculate discount
+  public int calculate_discount() {
+    if (this.total_price > 2000) {
+      return 200;
+    } else {
+      return 100;
+    }
+  }
+
+  // Method to display flower details
+  public void display() {
+    System.out.println("Flower Name: " + this.name);
+    System.out.println("Number of Petals: " + this.no_of_petals);
+    System.out.println("Price per Piece: " + this.price);
+    System.out.println("Number of Pieces: " + this.no_of_pieces);
+    System.out.println("Total Price: " + this.total_price);
+    System.out.println("Discount: " + this.calculate_discount());
+  }
+
+  // Getters and Setters
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getNo_of_petals() {
+    return no_of_petals;
+  }
+
+  public void setNo_of_petals(int no_of_petals) {
+    this.no_of_petals = no_of_petals;
+  }
+
+  public double getPrice() {
+    return price;
+  }
+
+  public void setPrice(double price) {
+    this.price = price;
+  }
+
+  public int getNo_of_pieces() {
+    return no_of_pieces;
+  }
+
+  public void setNo_of_pieces(int no_of_pieces) {
+    this.no_of_pieces = no_of_pieces;
+  }
+
+  public double getTotal_price() {
+    return total_price;
+  }
+
+  public void setTotal_price(double total_price) {
+    this.total_price = total_price;
+  }
+}
